@@ -13,7 +13,6 @@ def ask(question,ids=None,isvariant=False):
 	r=requests.post('http://127.0.01:88/ask',data=pdata)
 	return r.content.decode()
 
-
 async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 	mdic=update.message.to_dict()
 	if 'reply_to_message' in mdic and 'conversation_id' in mdic['reply_to_message']['text']:
